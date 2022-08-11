@@ -3,7 +3,8 @@ const allTask = async (req, res) => {
     try{
         let task = await model.find({})
         if(!task[0]){
-            return res.status(404).json(`No task found, create new`)
+            return res.json({success:"false"})
+            // return res.status(404).json(`No task found, create new`)
         }
        res.status(200).json({ task })
     }
@@ -41,7 +42,7 @@ const updateTask = async (req, res) => {
             runValidators: true
         })
         if(!task){
-            return res.status(404).json({ masg: `No task found`})
+            return res.status(404).json({ msg: `No task found`})
         }
         res.status(200).json({ task })
     }

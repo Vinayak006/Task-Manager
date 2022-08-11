@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TASK MANAGER</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>task manager</h1>
+      <section>
+        <div id="form">
+          <!-- <form> -->
+          <input
+            type="text"
+            name="task"
+            id="task"
+            size="30px"
+            placeholder="eg. car wash"
+            autocomplete="off"
+          />
+          <button onclick="addTask()" class="abtn">+</button>
+          <button onclick="updateTask()" class="ubtn">></button>
+          <!-- </form> -->
+        </div>
+        <article>
+          <div id="tasks">
+            <h3>Loading...</h3>
+          </div>
+          <!-- <div id="tasks">
+            <a href="/">task</a>
+            <div id="btns">
+              <h6>done</h6>
+              <h6>edit</h6>
+              <h6>delete</h6>
+            </div>
+          </div> -->
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
